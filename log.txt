@@ -1,0 +1,17 @@
+
+Breaking Change :
+Deleted Method name : MultiplyNumbers
+Code location at old file : 22
+
+WARNING: Changed Parameter Names: 
+Previous version of incrementAndMultiply at Line 13 had parameters [a,b]
+New version of incrementAndMultiply at Line 15 has parameters [b,a]
+
+WARNING: Changed Parameter Names: 
+Previous version of DivideAndDecrement at Line 31 had parameters [d,e]
+New version of DivideAndDecrement at Line 27 has parameters [a,b]
+
+Breaking Change :
+Changed Parameter Numbers: 
+Previous version of decrementAndAdd at Line 3 had 2 parameters [a,b]
+New version of decrementAndAdd at Line 4 has 3 parameters [a,b,e]
