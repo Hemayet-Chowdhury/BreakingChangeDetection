@@ -3,11 +3,11 @@ var path = require('path');
 // In newer Node.js versions where process is already global this isn't necessary.
 var process = require("process");
 
-var moveFrom = "./lodash-old";
+var moveFrom = "./lodash-new";
 
 var source_data = ""
 
-    var logger = fs.createWriteStream('./old_output.js', {
+    var logger = fs.createWriteStream('./R/new_output.txt', {
     flags: 'a' // 'a' means appending (old data will be preserved)
   })
 
@@ -31,11 +31,11 @@ fs.readdir(moveFrom, function (err, files) {
       }
 
       if (stat.isFile()){
-        var fileType = file.substr(file.length - 3)
-        if(fileType==".js"){
+        var fileType = file.substr(file.length - 2)
+        if(fileType==".R"){
             try {
-                const data = fs.readFileSync('./lodash-old/'+file, 'utf8')
-                logger.write(data)
+                const data = fs.readFileSync(moveFrom+"/"+file, 'utf8')
+                logger.write("file".toUpperCase+"##############\n"+data+"\n")
               } catch (err) {
                 console.error(err)
               }
